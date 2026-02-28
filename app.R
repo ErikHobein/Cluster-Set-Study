@@ -1,6 +1,5 @@
 # Load required packages ====
 library(shiny)
-library(shinythemes)
 library(rsconnect)
 library(tidyverse)
 library(readxl)
@@ -70,7 +69,6 @@ data_fatigue <- read_excel("data.xlsx", sheet = 5)
 
 # Define UI ====
 ui <- fluidPage(
-  theme = shinytheme("yeti"),
   navbarPage(
     "Cluster Set Study",
     
