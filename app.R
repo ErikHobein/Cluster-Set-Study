@@ -1,6 +1,17 @@
 # Load required packages ====
+
 library(shiny)
-library(tidyverse)
+library(bslib)        # statt shinythemes
+
+# tidyverse einzeln laden (stabiler als library(tidyverse))
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(readr)
+library(purrr)
+library(stringr)
+library(forcats)
+
 library(readxl)
 library(DT)
 library(plotly)
@@ -68,6 +79,7 @@ data_fatigue <- read_excel("data.xlsx", sheet = 5)
 
 # Define UI ====
 ui <- fluidPage(
+  theme = bs_theme(version = 5, bootswatch = "flatly"),
   navbarPage(
     "Cluster Set Study",
     
